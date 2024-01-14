@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=str
+Group=str
+
+WorkingDirectory=/home/str/aqua/
+Environment="PYTHONPATH=/home/str/aqua/"
+ExecStart=/home/str/aqua/.venv/bin/python /home/str/aqua/bot.py
+
+[Install]
+WantedBy=multi-user.target
